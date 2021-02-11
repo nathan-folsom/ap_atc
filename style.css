@@ -64,6 +64,10 @@ body {
     width: 50px;
     margin: 5px;
 }
+.quantity.empty {
+    border: 2px red solid;
+}
+
 .card-content {
     border: 1px #333 solid;
     border-radius: 5px;

@@ -4,6 +4,7 @@ $('.add').click((ev) => {
     const select = document.getElementById('select');
     if (select.value === '0') {
         // Open dropdown
+        select.classList.add('empty');
     } else {
         handleClasses(ev.target);
         handleClasses(document.getElementById('cart'), (cart) => {
@@ -11,6 +12,7 @@ $('.add').click((ev) => {
             cart.innerHTML = cartQty
         });
         handleClasses(document.getElementById('title'));
+        select.classList.remove('empty');
     }
 });
 
