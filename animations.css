@@ -14,12 +14,6 @@
     }
 }
 
-#title {
-    flex: 1 0 auto;
-    margin-left: 15px;
-    position: relative;
-}
-
 #title.animating {
     animation: title-animation 1.25s ease-out;
 }

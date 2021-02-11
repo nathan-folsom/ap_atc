@@ -12,6 +12,12 @@ body {
     color: white;
 }
 
+#title {
+    flex: 1 0 auto;
+    margin-left: 15px;
+    position: relative;
+}
+
 #cart {
     border: 1px white solid;
     margin-right: 15px;
