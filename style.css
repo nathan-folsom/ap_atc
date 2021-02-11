@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+.header {
+    background: black;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: white;
+}
+
+#cart {
+    border: 1px white solid;
+    margin-right: 15px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.hamburger {
+    margin-left: 15px;
+    font-size: 40px;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    flex: 0 0 50%;
+}
+
+.btn-container {
+    background: #333333;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add {
+    margin: 5px 10px;
+    background: green;
+    color: white;
+}
+
+.title-container {
+    background: #eee;
+    color: dodgerblue;
+    text-align: center;
+}
+
+.quantity {
+    background: white;
+    width: 50px;
+    margin: 5px;
+}
+.card-content {
+    border: 1px #333 solid;
+    border-radius: 5px;
+    margin: 10px;
+}
+.product-image {
+    height: 100px;
+}

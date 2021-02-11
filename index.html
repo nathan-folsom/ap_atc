@@ -4,115 +4,14 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            margin: 0;
-        }
-
-        .header {
-            background: black;
-            height: 48px;
-            width: 100%;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            color: white;
-        }
-
-        #cart {
-            border: 1px white solid;
-            margin-right: 15px;
-            height: 25px;
-            width: 25px;
-            text-align: center;
-        }
-
-        .title {
-            flex: 1 0 auto;
-            margin-left: 15px;
-        }
-
-        .hamburger {
-            margin-left: 15px;
-            font-size: 40px;
-        }
-
-        .cards {
-            display: flex;
-        }
-
-        .card {
-            flex: 0 0 50%;
-        }
-
-        .btn-container {
-            background: #333333;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .add {
-            margin: 5px 10px;
-            background: green;
-            color: white;
-        }
-
-        .title-container {
-            background: #eee;
-            color: dodgerblue;
-            text-align: center;
-        }
-
-        .quantity {
-            background: white;
-            width: 50px;
-            margin: 5px;
-        }
-        .card-content {
-            border: 1px #333 solid;
-            border-radius: 5px;
-            margin: 10px;
-        }
-        .product-image {
-            height: 100px;
-        }
-
-
-        #arrow {
-            position: absolute;
-            top: 15px;
-            right: 50px;
-            width: 40%;
-        }
-        #arrow-path {
-            transition: all .3s ease;
-        }
-        .hide {
-            display: none;
-        }
-        .show {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 
 <body>
-<svg  id="arrow" class="hide" viewBox="0 0 120 77" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <filter x="-3.6%" y="-6.4%" width="107.6%" height="112.3%" filterUnits="objectBoundingBox" id="filter-1">
-            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
-        </filter>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
-        <g id="Mobile" transform="translate(-183.000000, -9.000000)" stroke="#30C62E" stroke-width="4">
-            <path d="M185.791142,82.8276143 C215.348881,53.1069304 255.862273,27.4430972 299.200844,18.1073087 L261.20758,13.1223266" id="arrow-path" filter="url(#filter-1)"></path>
-        </g>
-    </g>
-</svg>
 <div class="header">
     <div class="hamburger">=</div>
-    <div class="title">ART PRIMO</div>
+    <div id="title">ART PRIMO</div>
     <div id="cart">0</div>
 </div>
 <div class="cards">
@@ -125,7 +24,14 @@
                 Markers
             </div>
             <div class="btn-container">
-                <div class="quantity">1</div>
+                <label>
+                    <select id="select" class="quantity" size="1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </label>
+
                 <button class="add">Add</button>
             </div>
         </div>
@@ -145,42 +51,12 @@
         </div>
     </div>
 </div>
-<script>
-    let cartQty = 0;
-    const cart = document.getElementById('cart');
-
-    const svg = document.getElementById('arrow');
-    const arrow = document.getElementById('arrow-path');
-    const arrowLength = arrow.getTotalLength();
-    arrow.style.strokeDasharray = arrowLength;
-    arrow.style.strokeDashoffset = arrowLength;
-
-    const buttons = document.querySelectorAll('.add');
-    buttons.forEach(b => b.onclick = () => addToCart());
-
-    const addToCart = () => {
-        toggleSvgDisplay();
-        setTimeout(() => {
-            arrow.style.strokeDashoffset = 0 + '';
-            updateCart();
-            resetArrowStyles();
-        }, 10)
-    }
-
-    const toggleSvgDisplay = () => {
-        svg.classList.toggle('hide');
-        svg.classList.toggle('show');
-    }
-
-    const resetArrowStyles = () => setTimeout(() => {
-        toggleSvgDisplay();
-        arrow.style.strokeDashoffset = arrowLength;
-    }, 500)
-
-    const updateCart = () => setTimeout(() => {
-        cartQty++;
-        cart.innerText = cartQty + '';
-    }, 300)
+<script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+</script>
+<script src="main.js">
 </script>
 </body>
 

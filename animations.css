@@ -1,0 +1,56 @@
+#cart.animating {
+    animation: cart-animation 1.25s ease-out;
+}
+
+@keyframes cart-animation {
+    0% {
+        left: -40%;
+    }
+    20% {
+        left: -40%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+#title {
+    flex: 1 0 auto;
+    margin-left: 15px;
+    position: relative;
+}
+
+#title.animating {
+    animation: title-animation 1.25s ease-out;
+}
+
+@keyframes title-animation {
+    13% {
+        left: 0;
+    }
+    20% {
+        left: 10%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.add.animating {
+    animation: button-color 1s ease-out forwards;
+}
+
+@keyframes button-color {
+    0% {
+        background: hotpink;
+        border-color: hotpink;
+    }
+    50% {
+        background: hotpink;
+        border-color: hotpink;
+    }
+    100% {
+        background: green;
+        border-color: green;
+    }
+}
