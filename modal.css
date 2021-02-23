@@ -20,6 +20,7 @@
     border: 1px #999999 solid;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .hidden {
@@ -33,6 +34,10 @@
 .modal-header, .modal-footer {
     display: flex;
     align-items: center;
+}
+
+.modal-footer {
+    margin-top: 15px;
 }
 
 .modal-title {
