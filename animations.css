@@ -4,9 +4,9 @@
 
 @keyframes cart-animation {
     0% {
-        left: -40%;
+        left: 0;
     }
-    20% {
+    60% {
         left: -40%;
     }
     100% {
@@ -19,10 +19,10 @@
 }
 
 @keyframes title-animation {
-    13% {
+    53% {
         left: 0;
     }
-    20% {
+    60% {
         left: 10%;
     }
     100% {

@@ -6,9 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 
 <body>
+<div class="image-modal-container hidden">
+    <div class="backdrop"></div>
+    <div class="image-modal">
+        <div class="modal-header">
+            <p class="modal-title">Product Title</p>
+            <button class="modal-button" id="close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="20" height="20">
+                    <path d="m 1 1 l 8 8 m 0 -8 l -8 8" stroke-linecap="round" stroke-width="2" stroke="#333333"/>
+                </svg>
+            </button>
+        </div>
+        <img id="modal-image" src="markers.jpg">
+        <div class="modal-footer">
+            <button class="modal-button" id="modal-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="20" height="20">
+                    <path d="m 6 1 l -4 4 l 4 4" stroke-linecap="round" stroke-width="2" stroke="#333333" fill="none"/>
+                </svg>
+                <span>Prev</span>
+            </button>
+            <div style="flex: 1 1 auto"></div>
+            <span id="image-position">1</span>
+            <span>/</span>
+            <span id="image-count">1</span>
+            <div style="flex: 1 1 auto"></div>
+            <button class="modal-button" id="modal-next">
+                <span>Next</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="20" height="20">
+                    <path d="m 4 1 l 4 4 l -4 4" stroke-linecap="round" stroke-width="2" stroke="#333333" fill="none"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
 <div class="header">
     <div class="hamburger">=</div>
     <div id="title">ART PRIMO</div>
@@ -17,9 +51,7 @@
 <div class="cards">
     <div class="card">
         <div class="card-content">
-            <div class="product-image">
-
-            </div>
+            <img class="product-image" src="markers.jpg">
             <div class="title-container">
                 Markers
             </div>
@@ -38,9 +70,7 @@
     </div>
     <div class="card">
         <div class="card-content">
-            <div class="product-image">
-
-            </div>
+            <img class="product-image" src="markers.jpg">
             <div class="title-container">
                 Markers
             </div>
@@ -56,8 +86,8 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous">
 </script>
-<script src="main.js">
-</script>
+<script src="animations.js"></script>
+<script src="image-modal.js"></script>
 </body>
 
 </html>
